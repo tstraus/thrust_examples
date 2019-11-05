@@ -1,0 +1,8 @@
+.vs/
+.vscode/
+*.swp
+build/
+.idea/
+cmake-build-*
+
+
