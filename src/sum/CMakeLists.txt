@@ -5,3 +5,5 @@ add_executable (${PROJECT_NAME} sum.cu)
 set_target_properties (${PROJECT_NAME} PROPERTIES CUDA_SEPARABLE_COMPILATION ON)
 target_include_directories (${PROJECT_NAME} PUBLIC ${CMAKE_CUDA_TOOLKIT_INCLUDE_DIRECTORIES})
 
+install (TARGETS ${PROJECT_NAME} DESTINATION bin)
+
