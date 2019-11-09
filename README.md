@@ -1,4 +1,4 @@
-## Thrust Test
+## Thrust Examples
 
 Me learning Thrust to use CUDA
 

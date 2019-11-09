@@ -1,6 +1,6 @@
 cmake_minimum_required (VERSION 3.14.0)
 
-project (thrust_test LANGUAGES CUDA CXX)
+project (thrust_examples LANGUAGES CUDA CXX)
 set (CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 if (NOT DEFINED CMAKE_CUDA_STANDARD)
@@ -8,9 +8,5 @@ if (NOT DEFINED CMAKE_CUDA_STANDARD)
     set (CMAKE_CUDA_STANDARD_REQUIRED ON)
 endif ()
 
-add_executable (${PROJECT_NAME} sum.cu)
-
-set_target_properties (${PROJECT_NAME} PROPERTIES CUDA_SEPARABLE_COMPILATION ON)
-
-target_include_directories (${PROJECT_NAME} PUBLIC ${CMAKE_CUDA_TOOLKIT_INCLUDE_DIRECTORIES})
+add_subdirectory (src)
 
