@@ -1,12 +1,16 @@
 cmake_minimum_required (VERSION 3.14.0)
 
-project (thrust_examples LANGUAGES CUDA CXX)
+project (compute_examples)
 set (CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-if (NOT DEFINED CMAKE_CUDA_STANDARD)
-    set (CMAKE_CUDA_STANDARD 11)
-    set (CMAKE_CUDA_STANDARD_REQUIRED ON)
-endif ()
+#set (Boost_USE_STATIC_LIBS OFF)
+#set (Boost_USE_MULTITHREADED ON)
+#set (Boost_USE_STATIC_RUNTIME OFF)
+#find_package (BoostCompute REQUIRED)
+
+find_package (OpenCL REQUIRED)
+
+include_directories (/usr/include/boost)
 
 add_subdirectory (src)
 

@@ -1,9 +1,8 @@
-project (sum LANGUAGES CUDA CXX)
+project (sum)
 
-add_executable (${PROJECT_NAME} sum.cu)
+add_executable (${PROJECT_NAME} sum.cpp)
 
-set_target_properties (${PROJECT_NAME} PROPERTIES CUDA_SEPARABLE_COMPILATION ON)
-target_include_directories (${PROJECT_NAME} PUBLIC ${CMAKE_CUDA_TOOLKIT_INCLUDE_DIRECTORIES})
+target_link_libraries (${PROJECT_NAME} OpenCL::OpenCL)
 
 install (TARGETS ${PROJECT_NAME} DESTINATION bin)
 
